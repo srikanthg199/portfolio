@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "buildCommand": "vite build",
+    "outputDirectory": "dist/public",
+    "installCommand": "npm install",
+    "devCommand": "vite dev --port $PORT",
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
+        }
+    ]
+}
