@@ -1,0 +1,86 @@
+Srikanth Golla
+Hyderabad, Telangana, 509207 |  +91 9505977263 | # srikanthgolla319@gmail.com | ï Linkedin
+Professional Summary
+Backend Engineer with 2+ years of experience building scalable systems using Node.js, AWS, and Firebase,
+specializing in high-performance API design (REST/GraphQL) for 10,000+ users, serverless architectures reducing
+costs by 30-40%, database optimization improving query speeds by 40-60%, and implementing secure
+authentication systems with 100% breach prevention.
+Technical Skills
+• Languages: JavaScript (ES6+), TypeScript, Python, SQL
+• Backend Development: Node.js, Express.js, NestJS, RESTful APIs, GraphQL, WebSockets, JWT
+• Cloud & Serverless Platforms: AWS Lambda, Firebase, Google Cloud Platform (GCP), AWS S3
+• Databases: PostgreSQL, MySQL, MongoDB, Firestore (NoSQL), Redis
+• DevOps & Tools: Docker, Git, GitHub, Postman, CI/CD Pipelines, SonarQube, Swagger, JIRA, VS Code, Cursor
+• Testing & Debugging: Jest, Postman, Chrome DevTools, Logging/Monitoring
+• AI & Automation: OpenAI APIs, Puppeteer, RAG , LLMs
+Experience
+Software Engineer, Brainvire Infotech – Ahmedabad, India.
+June 2023 - Present
+• Led the backend development of 3+ scalable platforms using Node.js, PostgreSQL, GraphQL, and Firebase,
+supporting over 10K+ daily users with optimized API design and query efficiency.
+• Designed and deployed cloud-native architectures on Google Cloud Platform and AWS, utilizing Lambda,
+S3, Firestore, and Redis to achieve <500ms response times and 99.9% uptime.
+• Engineered secure authentication and access control using Firebase Auth, OAuth 2.0, and App Check,
+eliminating unauthorized access incidents and maintaining data integrity at scale.
+• Automated operational workflows with cron jobs, cloud functions, and DB triggers, reducing manual effort
+and ensuring reliable real-time updates across services.
+• Integrated OpenAI models and built AI-enabled pipelines for auto-generating book summaries, embeddings,
+and dynamic assets, reflecting a strong commitment to exploring and applying LLMs and Generative AI.
+• Continuously upskill in emerging technologies including LLMs, RAG’s, Redis, Puppeteer, and AI
+infrastructure, applying new knowledge in production environments and demonstrating a strong passion for
+innovation.
+Associate Software Engineer, Brainvire Infotech – Ahmedabad, India.
+Jan 2023 – April 2023
+• Contributed to the development of 3+ enterprise-grade applications by collaborating with frontend,
+design, and QA teams, streamlining API workflows and reducing feature delivery time by 25%.
+• Built and optimized RESTful APIs using Node.js and Express.js, reducing server response latency by 40% for
+10K+ monthly active users.
+• Enhanced data performance by redesigning schemas and implementing indexes in PostgreSQL and
+MongoDB, decreasing complex query times by up to 35%.
+• Managed and monitored 5+ production databases with 99.9% uptime, applying data normalization and
+efficient structuring to boost retrieval speed by 30%.
+• Secured APIs with JWT and OAuth 2.0, enforcing robust access control and preventing all unauthorized
+access incidents over a continuous 12-month period.Projects
+[ Link ]
+Sing In Chinese | Node.js, PostgreSQL, Sequelize, React.js, Unity, AWS S3.
+• Developed an interactive language learning platform using Node.js and PostgreSQL, delivering gamified
+lessons with strong user retention and positive learner feedback.
+• Designed and deployed backend APIs using AWS Lambda and Express.js, optimizing queries and caching to
+reduce response times by 50%.
+• Implemented secure media handling with AWS S3 pre-signed URLs, ensuring high availability and encrypted
+uploads for student-submitted content.
+• Built a role-based access system with multi-level permissions to manage institutions, teachers, and students
+effectively, streamlining administrative workflows.
+• Automated recurring tasks using Lambda functions and cron jobs, improving operational efficiency and
+reducing manual effort.
+• Boosted user engagement with Firebase Cloud Messaging, improving daily active participation through
+targeted push notifications.
+Little Eats | JavaScript, Firebase (Auth, Firestore, Cloud Functions), Google Cloud Platform
+• Developed a personalized nutrition platform using Firebase and Cloud Functions, generating meal plans
+based on user preferences, allergies, and goals.
+• Engineered efficient real-time recommendations with 15+ Cloud Functions, maintaining high accuracy and
+seamless UX under dynamic conditions.
+• Optimized Firestore with strategic indexing and schema design, reducing read operations and improving
+query speed under scale.
+• Implemented secure, scalable authentication via Firebase Auth and Firestore transactions, ensuring
+conflict-free concurrent access and data integrity.
+Brevio-Book summaries | Node.js, PostgreSQL, Knex.js, GraphQL, Firebase, Redis, OpenAI, Puppeteer, GCP.
+• Designed GraphQL APIs using Node.js, Knex.js, and PostgreSQL, integrating ts_vector and pg_vector for
+personalized search and recommendations, serving 10K+ daily users.
+• Engineered secure and scalable backend with Firebase (Auth, App Check, Firestore) and Redis caching,
+eliminating unauthorized access and reducing data fetch time by 60%.
+• Built intelligent web scrapers using Puppeteer to extract and validate multilingual book records, achieving
+98%+ data accuracy with automated validation.
+• Integrated OpenAI models to generate full book content, summaries, embeddings, and dynamic cover
+images, automating creative workflows and enhancing content quality.
+• Optimized media delivery via Google Cloud Storage and GCP CDN, maintaining consistent <500ms load
+times for media assets like book covers and audio.
+• Implemented robust infrastructure features including DB replication, cron jobs, payment handling, and DB
+triggers to ensure high availability, automation, and accurate analytics tracking.
+Education
+Vidya Jyothi Institute of Technology, Hyderabad, B.tech in ECE.
+• CGPA: 8.05
+July 2018 – Aug 2022Achievements
+• Scaled API to 50K+ monthly users, cut latency by 50%
+• Maintained 99.99% database uptime, boosted speeds by 30%
+• Automated workflows saving 40+ hours weekly (20% efficiency gain)
