@@ -1,6 +1,7 @@
 import { ChevronDownIcon, EnvelopeIcon, CodeBracketIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import { PERSONAL_INFO, STATS } from '@/lib/constants';
 import { useScrollTo } from '@/hooks/useScrollTo';
+import { AnimatedStatNumber } from './AnimatedStatNumber';
 
 export const Hero = () => {
 	const { scrollToSection } = useScrollTo();
@@ -36,11 +37,13 @@ export const Hero = () => {
 						<p className='text-xl md:text-2xl text-gray-300 mb-8'>Building high-performance systems for 10K+ users with 99.99% uptime</p>
 					</div>
 
-					{/* Key Stats */}
+					{/* Key Stats with Animation */}
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
 						{STATS.map((stat, index) => (
 							<div key={index} className='text-center'>
-								<div className='stats-number text-4xl font-bold mb-2'>{stat.number}</div>
+								<div className='text-4xl font-bold mb-2'>
+									<AnimatedStatNumber value={stat.number} delay={index * 200} />
+								</div>
 								<div className='text-gray-300'>{stat.label}</div>
 							</div>
 						))}

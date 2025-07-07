@@ -20,27 +20,25 @@ export const About = () => {
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 					<div className='animate-slide-in'>
 						{/* Professional Profile Picture */}
-						<div className='w-full max-w-md mx-auto'>
-							<div className='bg-gradient-to-br from-accent to-yellow-400 p-1 rounded-2xl'>
-								<div className='bg-white p-2 rounded-xl'>
-									<img
-										src='/assets/profile-picture.jpg'
-										alt='Srikanth Golla - Backend Engineer'
-										className='w-full h-auto rounded-lg object-cover shadow-lg'
-										onError={(e) => {
-											// Fallback to placeholder if image fails to load
-											const target = e.target as HTMLImageElement;
-											target.style.display = 'none';
-											const fallback = target.nextElementSibling as HTMLElement;
-											if (fallback) fallback.style.display = 'flex';
-										}}
-									/>
-									{/* Fallback placeholder */}
-									<div className='hidden flex-col items-center justify-center h-80 bg-gray-50 rounded-lg'>
-										<UserCircleIcon className='w-32 h-32 text-gray-300 mb-4' />
-										<p className='text-gray-500 text-sm'>Add your profile picture</p>
-										<p className='text-gray-400 text-xs mt-1'>Place image at /assets/profile-picture.jpg</p>
-									</div>
+						<div className='w-full max-w-sm mx-auto'>
+							<div className='w-72 h-72 mx-auto'>
+								<img
+									src='/assets/profile-picture.jpg'
+									alt='Srikanth Golla - Backend Engineer'
+									className='w-full h-full rounded-full object-cover shadow-xl border-4 border-white ring-4 ring-gray-100'
+									onError={(e) => {
+										// Fallback to placeholder if image fails to load
+										const target = e.target as HTMLImageElement;
+										target.style.display = 'none';
+										const fallback = target.nextElementSibling as HTMLElement;
+										if (fallback) fallback.style.display = 'flex';
+									}}
+								/>
+								{/* Fallback placeholder */}
+								<div className='hidden flex-col items-center justify-center w-full h-full bg-gray-50 rounded-full border-4 border-white ring-4 ring-gray-100'>
+									<UserCircleIcon className='w-24 h-24 text-gray-300 mb-2' />
+									<p className='text-gray-500 text-sm text-center px-4'>Add your profile picture</p>
+									<p className='text-gray-400 text-xs mt-1 text-center px-4'>Place image at /assets/profile-picture.jpg</p>
 								</div>
 							</div>
 						</div>
