@@ -1,6 +1,23 @@
 import { UserCircleIcon } from '@heroicons/react/24/outline';
+import { useEffect, useRef } from 'react';
+import { loadImageWithFallback, getAssetUrl } from '@/utils/assetLoader';
 
 export const About = () => {
+	const imgRef = useRef<HTMLImageElement>(null);
+	const fallbackRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		if (imgRef.current && fallbackRef.current) {
+			const img = imgRef.current;
+			const fallback = fallbackRef.current;
+
+			loadImageWithFallback(img, getAssetUrl('profile-picture.jpg'), () => {
+				img.style.display = 'none';
+				fallback.style.display = 'flex';
+			});
+		}
+	}, []);
+
 	const quickFacts = [
 		{ number: '2+', label: 'Years Experience' },
 		{ number: '10K+', label: 'Users Served' },
@@ -22,23 +39,12 @@ export const About = () => {
 						{/* Professional Profile Picture */}
 						<div className='w-full max-w-sm mx-auto'>
 							<div className='w-72 h-72 mx-auto'>
-								<img
-									src='/assets/profile-picture.jpg'
-									alt='Srikanth Golla - Backend Engineer'
-									className='w-full h-full rounded-full object-cover shadow-xl border-4 border-white ring-4 ring-gray-100'
-									onError={(e) => {
-										// Fallback to placeholder if image fails to load
-										const target = e.target as HTMLImageElement;
-										target.style.display = 'none';
-										const fallback = target.nextElementSibling as HTMLElement;
-										if (fallback) fallback.style.display = 'flex';
-									}}
-								/>
+								<img ref={imgRef} alt='Srikanth Golla - Backend Engineer' className='w-full h-full rounded-full object-cover shadow-xl border-4 border-white ring-4 ring-gray-100' />
 								{/* Fallback placeholder */}
-								<div className='hidden flex-col items-center justify-center w-full h-full bg-gray-50 rounded-full border-4 border-white ring-4 ring-gray-100'>
+								<div ref={fallbackRef} className='hidden flex-col items-center justify-center w-full h-full bg-gray-50 rounded-full border-4 border-white ring-4 ring-gray-100 shadow-xl'>
 									<UserCircleIcon className='w-24 h-24 text-gray-300 mb-2' />
 									<p className='text-gray-500 text-sm text-center px-4'>Add your profile picture</p>
-									<p className='text-gray-400 text-xs mt-1 text-center px-4'>Place image at /assets/profile-picture.jpg</p>
+									<p className='text-gray-400 text-xs mt-1 text-center px-4'>Place image at /public/assets/profile-picture.jpg</p>
 								</div>
 							</div>
 						</div>

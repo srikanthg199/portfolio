@@ -2,26 +2,17 @@ import { ChevronDownIcon, EnvelopeIcon, CodeBracketIcon, ArrowDownTrayIcon } fro
 import { PERSONAL_INFO, STATS } from '@/lib/constants';
 import { useScrollTo } from '@/hooks/useScrollTo';
 import { AnimatedStatNumber } from './AnimatedStatNumber';
+import { downloadFileWithFallback } from '@/utils/assetLoader';
 
 export const Hero = () => {
 	const { scrollToSection } = useScrollTo();
 
-	const handleDownloadResume = () => {
-		// Download actual resume PDF from public assets
-		const link = document.createElement('a');
-		link.href = '/assets/Srikanth_Golla_Resume.pdf';
-		link.download = 'Srikanth_Golla_Resume.pdf';
-		link.target = '_blank';
-		link.rel = 'noopener noreferrer';
-
-		// Add error handling for missing file
-		link.onerror = () => {
-			alert('Resume file not found. Please contact for a copy of my resume.');
-		};
-
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
+	const handleDownloadResume = async () => {
+		try {
+			await downloadFileWithFallback('Srikanth_Golla_Resume.pdf', 'Srikanth_Golla_Resume.pdf');
+		} catch (error) {
+			alert(error instanceof Error ? error.message : 'Resume download failed. Please contact me directly at srikanth.golla@brainvire.com');
+		}
 	};
 
 	return (
