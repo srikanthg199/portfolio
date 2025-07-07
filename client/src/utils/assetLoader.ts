@@ -1,4 +1,12 @@
 // Utility functions for handling assets in production
+import profilePictureUrl from '@/assets/profile-picture.jpg';
+import resumeUrl from '@/assets/Srikanth_Golla_Resume.pdf';
+
+// Asset mappings - these are bundled by Vite and will work reliably on Vercel
+export const ASSETS = {
+	profilePicture: profilePictureUrl,
+	resume: resumeUrl,
+} as const;
 
 export const checkAssetExists = async (path: string): Promise<boolean> => {
 	try {
@@ -10,8 +18,16 @@ export const checkAssetExists = async (path: string): Promise<boolean> => {
 };
 
 export const getAssetUrl = (filename: string): string => {
-	// In production, assets should be served from the root
-	return `/assets/${filename}`;
+	// Use imported asset URLs which are processed by Vite
+	if (filename === 'profile-picture.jpg') {
+		return ASSETS.profilePicture;
+	}
+	if (filename === 'Srikanth_Golla_Resume.pdf') {
+		return ASSETS.resume;
+	}
+
+	// For any other assets, they should be imported as modules
+	throw new Error(`Asset ${filename} not found. Please import it as a module in assetLoader.ts`);
 };
 
 export const loadImageWithFallback = (imgElement: HTMLImageElement, src: string, fallback: () => void): void => {
@@ -31,12 +47,6 @@ export const downloadFileWithFallback = async (filename: string, displayName?: s
 	const assetUrl = getAssetUrl(filename);
 
 	try {
-		// First check if the file exists
-		const exists = await checkAssetExists(assetUrl);
-		if (!exists) {
-			throw new Error(`File not found: ${filename}`);
-		}
-
 		// Try to download using blob
 		const response = await fetch(assetUrl);
 		if (!response.ok) {
