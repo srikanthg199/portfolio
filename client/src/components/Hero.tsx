@@ -21,7 +21,8 @@ export const Hero = () => {
 				<div className='text-center animate-fade-in'>
 					<div className='mb-6 sm:mb-8'>
 						<h1 className='text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6'>
-							<span className='text-accent mt-2/3 block sm:inline'>Backend Engineer</span>
+							<span className='text-accent block mb-3 sm:mb-0 sm:inline'>Backend Engineer</span>
+							<span className='hidden sm:inline text-white'> </span>
 							<br className='block sm:hidden' />
 							<span className='text-white block sm:inline'>Scalable APIs & Cloud Systems</span>
 						</h1>
