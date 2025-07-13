@@ -79,7 +79,6 @@ export const Contact = () => {
 								</svg>
 								Send a Message
 							</a>
-							<p className='text-sm text-gray-500 mt-4'>This will open your default email client</p>
 						</div>
 					</div>
 				</div>
